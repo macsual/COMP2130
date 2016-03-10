@@ -72,11 +72,6 @@ main(void)
         if (fgets(buf, sizeof buf, stdin) == NULL) {
             fprintf(stderr, "fgets failed");
 
-            /* if fgets fails, the content of the array being written to is
-             * indeterminate(because of undefined behavior). It is necessary
-             * to reset the string to a known value to avoid errors on
-             * subsequent string manipulation functions.
-            */
             *buf = '\0';
 
             continue;
@@ -95,7 +90,6 @@ main(void)
 
         if (strtocellval(buf, c) == -1)
             fprintf(stderr, "Invalid cell value %s\n", buf);
-
     }
 
     return EXIT_SUCCESS;
