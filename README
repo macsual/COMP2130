@@ -1,0 +1,11 @@
+VPATH build
+-----------
+
+Run the following commands from the project root:
+
+mkdir build
+cd build
+../configure
+make
+
+and then run the executable located at $(PROJ_ROOTDIR)/build/src/spreadsheet
