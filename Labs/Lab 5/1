@@ -1,0 +1,9 @@
+#! /bin/sh
+
+# Author: Romario Maxwell
+# 2016
+# Course Code: COMP2130
+# Institution: The UWI, Mona
+# Lab 5
+
+ps -ef && ps -eo pid > processids.txt
